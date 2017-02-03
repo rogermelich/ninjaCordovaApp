@@ -30,6 +30,10 @@ var app = {
         this.logDeviceInfo();
         this.receivedEvent('deviceready');
     },
+    
+    fastclick: function () {
+        FastClick.attach(document.body);
+    },
 
 //     addEventListener: function () {
 //     if (navigator.notification) { // Override default HTML alert with native dialog

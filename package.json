@@ -1,0 +1,23 @@
+{
+  "name": "ninjacordovaapp",
+  "version": "1.0.0",
+  "description": "examples ninja Cordova App",
+  "main": "www/js/index.js",
+  "dependencies": {
+    "fastclick": "^1.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rogermelich/ninjaCordovaApp.git"
+  },
+  "author": "Roger Melich Curto",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rogermelich/ninjaCordovaApp/issues"
+  },
+  "homepage": "https://github.com/rogermelich/ninjaCordovaApp#readme"
+}
