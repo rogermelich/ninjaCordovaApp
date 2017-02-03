@@ -29,8 +29,24 @@ var app = {
     onDeviceReady: function() {
         this.logDeviceInfo();
         this.receivedEvent('deviceready');
-
     },
+    
+    fastclick: function () {
+        FastClick.attach(document.body);
+    },
+
+//     addEventListener: function () {
+//     if (navigator.notification) { // Override default HTML alert with native dialog
+//         window.alert = function (message) {
+//             navigator.notification.alert(
+//                 message,    // message
+//                 null,       // callback
+//                 "Workshop", // title
+//                 'OK'        // buttonName
+//             );
+//         };
+//     }
+// }, false);
 
     // Update DOM on a Received Event
     receivedEvent: function(id) {
