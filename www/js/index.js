@@ -18,7 +18,7 @@
  */
 var app = {
     // Application Constructor
-    initialize: function() {
+    initialize: function () {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
     },
 
@@ -26,11 +26,13 @@ var app = {
     //
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
-    onDeviceReady: function() {
-        this.logDeviceInfo();
+    onDeviceReady: function () {
         this.receivedEvent('deviceready');
+        console.log(navigation.vibrate);
+        this.fastclick();
+        this.addLocation();
     },
-    
+
     fastclick: function () {
         FastClick.attach(document.body);
     },
@@ -48,8 +50,19 @@ var app = {
 //     }
 // }, false);
 
+    addLocation: function () {
+        navigator.geolocation.getCurrentPosition(
+            function (position) {
+                alert(position.coords.latitude + ',' + position.coords.longitude);
+            },
+            function () {
+                alert('Error getting location');
+            });
+        return false;
+    },
+
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
+    receivedEvent: function (id) {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
